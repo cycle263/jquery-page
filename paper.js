@@ -138,6 +138,9 @@ jQuery.fn.extend({
                         }else if(opts.currentPage === f){
                             var temp =  opts.currentPage - (maxNum - 1);
                             opts.firstPageNum = temp > 0 ? temp : opts.firstPageNum;
+                        }else if(opts.firstPageNum > opts.currentPage){
+                          var temp =  opts.currentPage - (maxNum - 1);
+                          opts.firstPageNum = temp > 0 ? temp : 1;
                         }
                     }
                     pagerRequest();
@@ -175,6 +178,9 @@ jQuery.fn.extend({
                         }else if(opts.currentPage === f){
                             var temp =  opts.currentPage - (maxNum - 1);
                             opts.firstPageNum = temp > 0 ? temp : opts.firstPageNum;
+                        }else if(opts.firstPageNum > opts.currentPage){
+                          var temp =  opts.currentPage - (maxNum - 1);
+                          opts.firstPageNum = temp > 0 ? temp : 1;
                         }
                     }
                     pagerRequest();
